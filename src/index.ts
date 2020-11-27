@@ -15,7 +15,7 @@ function pipe<
 >(func: F1, ...funcs: FN): R {
   const allFuncs = [func, ...funcs];
   return function piped(raw: any) {
-    return allFuncs.reduce((memo, func) => func(memo), raw);
+    return allFuncs.reduce((memo, f) => f(memo), raw);
   } as R
 }
 
