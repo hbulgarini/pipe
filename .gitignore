@@ -1,4 +1,2 @@
-src
-tsconfig.json
-tslint.json
-.prettierrc
+/lib
+node_modules
